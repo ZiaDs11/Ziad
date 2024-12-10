@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "f9e421b7-2a88-46a9-8a26-556cf6c9f550",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40290376"
+	},
+	"item": [
+		{
+			"name": "TASK",
+			"item": [
+				{
+					"name": "sign in ",
+					"request": {
+						"auth": {
+							"type": "inherit",
+							"inherit": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \r\n                \"email\": \"voda@example.com\",\r\n                \"password\": \"vodafone\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/auth/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"username\": \"Voda11\",\r\n                \"email\": \"vodafone@example.com\",\r\n                \"password\": \"vodafone123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "Ceate Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMzgzMTUwMiwianRpIjoiOTQ5MTk4MTAtMGViYS00MDk2LTk4Y2UtMDU3M2Y1NTA0YzdkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjQiLCJuYmYiOjE3MzM4MzE1MDIsImNzcmYiOiJiMmFjNTE1YS1kMjI1LTQxM2MtYTY3Zi1lZjk1NDExZDY2ZmUiLCJleHAiOjE3MzM4NzQ3MDJ9.8JJY8Mh5UinpiyE0TIJvA5TaJaYsWJXP5zQVYXcPHnU"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMzgzMTUwMiwianRpIjoiOTQ5MTk4MTAtMGViYS00MDk2LTk4Y2UtMDU3M2Y1NTA0YzdkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjQiLCJuYmYiOjE3MzM4MzE1MDIsImNzcmYiOiJiMmFjNTE1YS1kMjI1LTQxM2MtYTY3Zi1lZjk1NDExZDY2ZmUiLCJleHAiOjE3MzM4NzQ3MDJ9.8JJY8Mh5UinpiyE0TIJvA5TaJaYsWJXP5zQVYXcPHnU",
+								"name": "authorization",
+								"type": "text"
+							},
+							{
+								"key": "Cache-Control",
+								"value": "no-cache",
+								"name": "cache-control",
+								"type": "text"
+							},
+							{
+								"key": "Postman-Token",
+								"value": "<calculated when request is sent>",
+								"name": "postman-token",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"name": "content-type",
+								"type": "text"
+							},
+							{
+								"key": "Content-Length",
+								"value": "<calculated when request is sent>",
+								"name": "content-length",
+								"type": "text"
+							},
+							{
+								"key": "Host",
+								"value": "<calculated when request is sent>",
+								"name": "host",
+								"type": "text"
+							},
+							{
+								"key": "User-Agent",
+								"value": "PostmanRuntime/7.39.1",
+								"name": "user-agent",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*",
+								"name": "accept",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"name": "accept-encoding",
+								"type": "text"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive",
+								"name": "connection",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMzgzMTUwMiwianRpIjoiOTQ5MTk4MTAtMGViYS00MDk2LTk4Y2UtMDU3M2Y1NTA0YzdkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjQiLCJuYmYiOjE3MzM4MzE1MDIsImNzcmYiOiJiMmFjNTE1YS1kMjI1LTQxM2MtYTY3Zi1lZjk1NDExZDY2ZmUiLCJleHAiOjE3MzM4NzQ3MDJ9.8JJY8Mh5UinpiyE0TIJvA5TaJaYsWJXP5zQVYXcPHnU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                \"title\": \"Static Test Task\",\r\n                \"description\": \"Task for static testing\",\r\n                \"due_date\": \"2024-12-15T12:00:00\"\r\n            }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/api/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMzgzMTUwMiwianRpIjoiOTQ5MTk4MTAtMGViYS00MDk2LTk4Y2UtMDU3M2Y1NTA0YzdkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjQiLCJuYmYiOjE3MzM4MzE1MDIsImNzcmYiOiJiMmFjNTE1YS1kMjI1LTQxM2MtYTY3Zi1lZjk1NDExZDY2ZmUiLCJleHAiOjE3MzM4NzQ3MDJ9.8JJY8Mh5UinpiyE0TIJvA5TaJaYsWJXP5zQVYXcPHnU"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Updated Task Title\",\r\n  \"description\": \"This is an updated description.\",\r\n  \"due_date\": \"2023-12-25T18:00:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/api/tasks/22"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMzgzMTUwMiwianRpIjoiOTQ5MTk4MTAtMGViYS00MDk2LTk4Y2UtMDU3M2Y1NTA0YzdkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjQiLCJuYmYiOjE3MzM4MzE1MDIsImNzcmYiOiJiMmFjNTE1YS1kMjI1LTQxM2MtYTY3Zi1lZjk1NDExZDY2ZmUiLCJleHAiOjE3MzM4NzQ3MDJ9.8JJY8Mh5UinpiyE0TIJvA5TaJaYsWJXP5zQVYXcPHnU"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/api/tasks/22"
+					},
+					"response": []
+				},
+				{
+					"name": "Restore Task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Subscribe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMzgzNTMxMiwianRpIjoiZjIzNmE2MDUtYmFhNy00ZDkzLTk0NWYtNDQ4MWQ4YjE0N2ZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjQiLCJuYmYiOjE3MzM4MzUzMTIsImNzcmYiOiIyNTk3N2NkNS1kYmMwLTQwMTctOWExNy1hOTZlNmE2MDE4NmQiLCJleHAiOjE3MzM4MzYyMTJ9.PHslCdowfONHcLwDOmCje13mXBfGAu5RxwBj_DDiCNk"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"start_date\": \"2023-12-10 00:00:00\",\r\n  \"frequency\": \"daily\",\r\n  \"report_time\": \"08:00:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/subscription/subscribe"
+					},
+					"response": []
+				},
+				{
+					"name": "Gen Report",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMzgzNTMxMiwianRpIjoiZjIzNmE2MDUtYmFhNy00ZDkzLTk0NWYtNDQ4MWQ4YjE0N2ZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjQiLCJuYmYiOjE3MzM4MzUzMTIsImNzcmYiOiIyNTk3N2NkNS1kYmMwLTQwMTctOWExNy1hOTZlNmE2MDE4NmQiLCJleHAiOjE3MzM4MzYyMTJ9.PHslCdowfONHcLwDOmCje13mXBfGAu5RxwBj_DDiCNk"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"frequency\": \"daily\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:5000/reports/generate"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
