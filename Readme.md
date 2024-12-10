@@ -47,6 +47,9 @@ $ pip install -r requirement.txt
 # Run the app
 $ python main.py
 
+# Database 
+The backend server uses an SQLite database located at:
+'root/instance/Vodafone.db' No additional installation 
 ```
 
 ## Testing the Backend Server
